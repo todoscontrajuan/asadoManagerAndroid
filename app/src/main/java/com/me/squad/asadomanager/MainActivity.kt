@@ -2,6 +2,9 @@ package com.me.squad.asadomanager
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,5 +31,22 @@ class MainActivity : AppCompatActivity() {
         asados_container.layoutManager = linearLayoutManager
         adapter = AsadosAdapter(asadosList)
         asados_container.adapter = adapter
+
+        setSupportActionBar(bottom_app_bar)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
+                bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
+            }
+        }
+        return true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.bottom_nav_drawer_menu, menu)
+        return true
     }
 }

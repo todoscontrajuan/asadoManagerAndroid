@@ -29,7 +29,7 @@ class AsadosAdapter(private val asados: ArrayList<Asado>): RecyclerView.Adapter<
         }
 
         override fun onClick(v: View?) {
-            Log.d("RecyclerView", "CLICK!")
+            Log.d("RecyclerView", "CLICK! ${asado}")
         }
 
         fun bindAsado(asado: Asado) {
