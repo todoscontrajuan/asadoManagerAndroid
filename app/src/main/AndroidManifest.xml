@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AsadoFormActivity"></activity>
+        <activity android:name=".AsadoFormActivity" />
+        <activity android:name=".EditAsadoFormActivity"></activity>
     </application>
 
 </manifest>

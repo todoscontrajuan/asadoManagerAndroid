@@ -1,16 +1,19 @@
 package com.me.squad.asadomanager
 
+import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.asados_item_row.view.*
 
-class AsadosAdapter(private val asados: ArrayList<Asado>): RecyclerView.Adapter<AsadosAdapter.AsadoHolder>() {
+class AsadosAdapter(private val asados: ArrayList<Asado>, private val context: Context): RecyclerView.Adapter<AsadosAdapter.AsadoHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AsadosAdapter.AsadoHolder {
         val inflatedView = parent.inflate(R.layout.asados_item_row, false)
-        return AsadoHolder(inflatedView)
+        return AsadoHolder(inflatedView, context)
     }
 
     override fun getItemCount() = asados.size
@@ -20,7 +23,7 @@ class AsadosAdapter(private val asados: ArrayList<Asado>): RecyclerView.Adapter<
         holder.bindAsado(itemAsado)
     }
 
-    class AsadoHolder(v: View): RecyclerView.ViewHolder(v), View.OnClickListener {
+    class AsadoHolder(v: View, val context: Context): RecyclerView.ViewHolder(v), View.OnClickListener {
         private var view: View = v
         private var asado: Asado? = null
 
@@ -30,6 +33,8 @@ class AsadosAdapter(private val asados: ArrayList<Asado>): RecyclerView.Adapter<
 
         override fun onClick(v: View?) {
             Log.d("RecyclerView", "CLICK! ${asado}")
+            val intent = Intent(context, EditAsadoFormActivity::class.java)
+            context.startActivity(intent)
         }
 
         fun bindAsado(asado: Asado) {

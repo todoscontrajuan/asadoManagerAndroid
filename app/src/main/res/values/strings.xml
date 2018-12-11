@@ -2,11 +2,11 @@
     <string name="app_name">Asado Manager</string>
     <string name="main_screen_title">Mis Asados</string>
 
-    <!-- Add asado form -->
+    <!-- Forms -->
     <string name="title_hint">Titulo</string>
     <string name="date_hint">Fecha</string>
     <string name="location_hint">Ubicación</string>
     <string name="note_hint">Nota</string>
-    <string name="see_attendants_labels">Ver asistentes</string>
+    <string name="see_attendants_labels">Ver asistentes - Invitar</string>
     <string name="remove_asado">Anular asistencia</string>
 </resources>

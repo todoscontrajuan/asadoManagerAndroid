@@ -21,18 +21,12 @@ class MainActivity : AppCompatActivity() {
 
         val asadosList: ArrayList<Asado> = arrayListOf(Asado("Mi primer asado", 22, "22/07/09"),
                 Asado("Mi segundo asado", 20, "22/07/09"),
-                Asado("Mi segundo asado", 20, "22/07/09"),
-                Asado("Mi segundo asado", 20, "22/07/09"),
-                Asado("Mi segundo asado", 20, "22/07/09"),
-                Asado("Mi segundo asado", 20, "22/07/09"),
-                Asado("Mi segundo asado", 20, "22/07/09"),
-                Asado("Mi segundo asado", 20, "22/07/09"),
                 Asado("Mi tercer asado", 3, "22/07/09"))
 
 
         linearLayoutManager = LinearLayoutManager(this)
         asados_container.layoutManager = linearLayoutManager
-        adapter = AsadosAdapter(asadosList)
+        adapter = AsadosAdapter(asadosList, this)
         asados_container.adapter = adapter
 
         fab.setOnClickListener {
