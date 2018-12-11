@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AsadoFormActivity"
+    android:padding="@dimen/form_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:id="@+id/back_button"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/asado_title"
+            android:hint="@string/title_hint"
+            android:textColorHint="@color/colorBlackText"
+            app:layout_constraintTop_toBottomOf="@id/back_button"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/form_margin"
+            android:textColor="@color/colorBlackText"
+            android:textSize="24sp"
+            android:fontFamily="@font/google_sans_medium" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_container"
+            android:layout_marginTop="@dimen/form_margin"
+            app:layout_constraintTop_toBottomOf="@id/asado_title"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_event"
+                android:id="@+id/date_icon"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_text"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/date_icon"
+                android:hint="@string/date_hint"
+                android:textColorHint="@color/colorAccent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/form_margin_medium"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/form_text_size"
+                android:fontFamily="@font/google_sans_medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/location_container"
+            android:layout_marginTop="@dimen/form_margin"
+            app:layout_constraintTop_toBottomOf="@id/date_container"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_location"
+                android:id="@+id/location_icon"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/location_text"
+                android:hint="@string/location_hint"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/location_icon"
+                android:textColorHint="@color/colorAccent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/form_margin_medium"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/form_text_size"
+                android:fontFamily="@font/google_sans_medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/note_container"
+            android:layout_marginTop="@dimen/form_margin"
+            app:layout_constraintTop_toBottomOf="@id/location_container"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_note"
+                android:id="@+id/note_icon"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/note_text"
+                android:hint="@string/note_hint"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/note_icon"
+                android:textColorHint="@color/colorAccent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/form_margin_medium"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/form_text_size"
+                android:fontFamily="@font/google_sans_medium" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/attendants_container"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/form_margin"
+            app:layout_constraintTop_toBottomOf="@id/note_container"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_attendants"
+                android:id="@+id/attendants_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_size"
+                android:id="@+id/attendants_text"
+                android:layout_marginStart="@dimen/form_margin_medium"
+                android:text="@string/see_attendants_labels"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/form_text_size"
+                android:fontFamily="@font/google_sans_medium"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/remove_container"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/form_margin"
+            app:layout_constraintTop_toBottomOf="@id/attendants_container"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_cancel"
+                android:id="@+id/remove_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_size"
+                android:id="@+id/remove_text"
+                android:layout_marginStart="@dimen/form_margin_medium"
+                android:text="@string/remove_asado"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/form_text_size"
+                android:fontFamily="@font/google_sans_medium"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
