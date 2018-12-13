@@ -1,12 +1,16 @@
 package com.me.squad.asadomanager
 
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_asado_form.*
 import kotlinx.android.synthetic.main.activity_edit_asado_form.*
 import java.util.*
 
 class EditAsadoFormActivity : AppCompatActivity() {
+
+    private val cal = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +19,7 @@ class EditAsadoFormActivity : AppCompatActivity() {
 
         setupUI()
         setDateSelector()
+        setTimeSelector()
     }
 
     private fun setupUI() {
@@ -24,11 +29,10 @@ class EditAsadoFormActivity : AppCompatActivity() {
         date_text_edit.setText(DateUtils.toSimpleString(asado.date))
         location_text_edit.setText(asado.location)
         note_text_edit.setText(asado.note)
+        time_text_edit.setText(DateUtils.toSimpleStringTime(asado.date.hours, asado.date.minutes))
     }
 
     private fun setDateSelector() {
-        val cal = Calendar.getInstance()
-
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, monthOfYear)
@@ -37,10 +41,22 @@ class EditAsadoFormActivity : AppCompatActivity() {
             date_text_edit.setText(DateUtils.toSimpleString(cal.time))
         }
         date_text_edit.setOnClickListener {
-            DatePickerDialog(this@EditAsadoFormActivity, R.style.DatePicker, dateSetListener,
+            DatePickerDialog(this@EditAsadoFormActivity, R.style.PickerTheme, dateSetListener,
                     cal.get(Calendar.YEAR),
                     cal.get(Calendar.MONTH),
                     cal.get(Calendar.DAY_OF_MONTH)).show()
+        }
+    }
+
+    private fun setTimeSelector() {
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hours, minute ->
+            time_text_edit.setText(DateUtils.toSimpleStringTime(hours, minute))
+        }
+        time_text_edit.setOnClickListener {
+            TimePickerDialog(this@EditAsadoFormActivity, R.style.PickerTheme, timeSetListener,
+                    cal.get(Calendar.HOUR_OF_DAY),
+                    cal.get(Calendar.MINUTE),
+                    false).show()
         }
     }
 }
