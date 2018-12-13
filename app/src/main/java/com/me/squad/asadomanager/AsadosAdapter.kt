@@ -5,9 +5,9 @@ import android.content.Intent
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.asados_item_row.view.*
+import java.util.*
 
 class AsadosAdapter(private val asados: ArrayList<Asado>, private val context: Context): RecyclerView.Adapter<AsadosAdapter.AsadoHolder>() {
 
@@ -32,16 +32,16 @@ class AsadosAdapter(private val asados: ArrayList<Asado>, private val context: C
         }
 
         override fun onClick(v: View?) {
-            Log.d("RecyclerView", "CLICK! ${asado}")
             val intent = Intent(context, EditAsadoFormActivity::class.java)
+            intent.putExtra("Asado", asado)
             context.startActivity(intent)
         }
 
         fun bindAsado(asado: Asado) {
             this.asado = asado
             view.asado_title.text = asado.title
-            view.asado_invites.text = asado.invites.toString() + " asistentes"
-            view.asado_date.text = asado.date
+            view.asado_attendants.text = asado.attendants.size.toString() + " asistentes"
+            view.asado_date.text = DateUtils.toSimpleString(asado.date)
         }
 
     }

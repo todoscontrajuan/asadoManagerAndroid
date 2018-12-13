@@ -8,5 +8,5 @@
     <string name="location_hint">Ubicación</string>
     <string name="note_hint">Nota</string>
     <string name="see_attendants_labels">Ver asistentes - Invitar</string>
-    <string name="remove_asado">Anular asistencia</string>
+    <string name="remove_asado">Anular asistencia - Borrar</string>
 </resources>

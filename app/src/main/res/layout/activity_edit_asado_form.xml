@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
-            android:id="@+id/back_button"
+            android:id="@+id/back_button_edit"
             android:src="@drawable/ic_arrow_back"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -29,10 +29,10 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/asado_title"
+            android:id="@+id/asado_title_edit"
             android:hint="@string/title_hint"
-            android:textColorHint="@color/colorBlackText"
-            app:layout_constraintTop_toBottomOf="@id/back_button"
+            android:textColorHint="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/back_button_edit"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="@dimen/form_margin"
             android:textColor="@color/colorBlackText"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/date_container"
             android:layout_marginTop="@dimen/form_margin"
-            app:layout_constraintTop_toBottomOf="@id/asado_title"
+            app:layout_constraintTop_toBottomOf="@id/asado_title_edit"
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
@@ -56,10 +56,14 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/date_text"
+                android:id="@+id/date_text_edit"
                 android:layout_centerInParent="true"
                 android:layout_toEndOf="@id/date_icon"
                 android:hint="@string/date_hint"
+                android:inputType="date"
+                android:maxLines="1"
+                android:clickable="true"
+                android:focusable="false"
                 android:textColorHint="@color/colorAccent"
                 android:background="@android:color/transparent"
                 android:layout_marginStart="@dimen/form_margin_medium"
@@ -86,7 +90,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/location_text"
+                android:id="@+id/location_text_edit"
                 android:hint="@string/location_hint"
                 android:layout_centerInParent="true"
                 android:layout_toEndOf="@id/location_icon"
@@ -116,7 +120,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/note_text"
+                android:id="@+id/note_text_edit"
                 android:hint="@string/note_hint"
                 android:layout_centerInParent="true"
                 android:layout_toEndOf="@id/note_icon"

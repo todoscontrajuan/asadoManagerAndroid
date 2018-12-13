@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,10 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(bottom_app_bar)
 
-        val asadosList: ArrayList<Asado> = arrayListOf(Asado("Mi primer asado", 22, "22/07/09"),
-                Asado("Mi segundo asado", 20, "22/07/09"),
-                Asado("Mi tercer asado", 3, "22/07/09"))
-
+        // Mock data
+        val attendants = listOf<String>("Juan", "Pepe", "Carlos")
+        val attendants2 = listOf<String>()
+        val asadosList: ArrayList<Asado> = arrayListOf(Asado("Mi primer asado", attendants, Date(), null, null),
+                Asado("Mi segundo asado", attendants, Date(), "Casa de Tito", null),
+                Asado("Mi tercer asado", attendants2, Date(), "Casa de Juan", "Nota mas larga e interesante para ver como funciona el texto"))
 
         linearLayoutManager = LinearLayoutManager(this)
         asados_container.layoutManager = linearLayoutManager
