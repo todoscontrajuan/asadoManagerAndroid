@@ -14,6 +14,10 @@ class AttendantsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_attendants)
 
+        setupAttendantsList()
+    }
+
+    private fun setupAttendantsList() {
         val attendants = mutableListOf<String>("Asistente 1", "Asistente 2", "Asistente 3")
         for (item: String in attendants) {
             val textView = TextView(this)

@@ -47,12 +47,43 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/attendants_footer"
             android:textColor="@color/colorAccent"
             android:text="@string/attendants_screen_footer"
             app:layout_constraintTop_toBottomOf="@id/attendants_card"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/invite_container"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/form_margin"
+            app:layout_constraintTop_toBottomOf="@id/attendants_footer"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/ic_person_add"
+                android:id="@+id/invite_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon_size"
+                android:id="@+id/invite_text"
+                android:layout_marginStart="@dimen/form_margin_medium"
+                android:text="@string/invite_label"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/form_text_size"
+                android:fontFamily="@font/google_sans_medium"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

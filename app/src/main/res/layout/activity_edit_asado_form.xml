@@ -187,7 +187,7 @@
                 android:layout_height="@dimen/icon_size"
                 android:id="@+id/attendants_text"
                 android:layout_marginStart="@dimen/form_margin_medium"
-                android:text="@string/see_attendants_labels"
+                android:text="@string/see_attendants_label"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/form_text_size"
                 android:fontFamily="@font/google_sans_medium"
