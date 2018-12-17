@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "812388031201",
+    "firebase_url": "https://asado-manager-47ade.firebaseio.com",
+    "project_id": "asado-manager-47ade",
+    "storage_bucket": "asado-manager-47ade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812388031201:android:06760c36c85d4b72",
+        "android_client_info": {
+          "package_name": "com.me.squad.asadomanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812388031201-5ivkaciho8ncg830mfvdln70bn3ba147.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.me.squad.asadomanager",
+            "certificate_hash": "7091425afe8e10b7a067a83a9f2b7e584cb29a75"
+          }
+        },
+        {
+          "client_id": "812388031201-p0uk51mt215h9gtdepd8iahn2u10hi5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXee2krrqkmpBnEHcrKetC91a8Lkz5-YE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812388031201-p0uk51mt215h9gtdepd8iahn2u10hi5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
