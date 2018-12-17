@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Asado Manager</string>
     <string name="main_screen_title">Mis Asados</string>
+    <string name="attendants_screen_title">Asistentes</string>
+    <string name="attendants_screen_footer">* Listadas las personas que han aceptado asistir</string>
 
     <!-- Forms -->
     <string name="title_hint">Titulo</string>

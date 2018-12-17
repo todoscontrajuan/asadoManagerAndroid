@@ -2,6 +2,7 @@ package com.me.squad.asadomanager
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_asado_form.*
@@ -30,6 +31,11 @@ class EditAsadoFormActivity : AppCompatActivity() {
         location_text_edit.setText(asado.location)
         note_text_edit.setText(asado.note)
         time_text_edit.setText(DateUtils.toSimpleStringTime(asado.date.hours, asado.date.minutes))
+
+        attendants_container.setOnClickListener {
+            val intent =  Intent(this, AttendantsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setDateSelector() {

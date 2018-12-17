@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AsadoFormActivity" />
-        <activity android:name=".EditAsadoFormActivity"></activity>
+        <activity android:name=".EditAsadoFormActivity" />
+        <activity android:name=".AttendantsActivity"></activity>
     </application>
 
 </manifest>
