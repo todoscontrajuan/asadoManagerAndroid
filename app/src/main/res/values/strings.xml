@@ -4,6 +4,7 @@
     <string name="attendants_screen_title">Asistentes</string>
     <string name="attendants_screen_footer">* Listadas las personas que han aceptado asistir</string>
     <string name="invite_label">Invitar</string>
+    <string name="welcome_toast">Gracias por loguearte!</string>
 
     <!-- Forms -->
     <string name="title_hint">Titulo</string>
@@ -13,4 +14,8 @@
     <string name="note_hint">Nota</string>
     <string name="see_attendants_label">Ver asistentes - Invitar</string>
     <string name="remove_asado">Anular asistencia - Borrar</string>
+
+    <!-- Menu -->
+    <string name="log_out">Cerrar Sesión</string>
+    <string name="about">Información</string>
 </resources>

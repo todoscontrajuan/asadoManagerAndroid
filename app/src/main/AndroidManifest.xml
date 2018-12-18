@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".AsadoFormActivity" />
         <activity android:name=".EditAsadoFormActivity" />
-        <activity android:name=".AttendantsActivity"></activity>
+        <activity android:name=".AttendantsActivity" />
+        <activity android:name=".SignInActivity"></activity>
     </application>
 
 </manifest>
